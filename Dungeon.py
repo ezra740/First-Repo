@@ -31,8 +31,6 @@ isPlaying = True
 
 while (isPlaying):
 
-    hero_stats ["name"] = input ("What is your name?\n")
-
     action = input ("\nSelect Action: Attack, Move & Flee\n").lower()
 
     print (f"Player Action: {action}")

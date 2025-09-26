@@ -46,7 +46,7 @@ def player_heal(item_name):
     print(f"Your inventory is now {hero_inventory}")
 
 
-def use_item():
+
     item_name = input(f"What item do you want to use? {hero_inventory}\n").lower()
     print (f"The item you wamt to use is {item_name}")
 
@@ -81,7 +81,7 @@ while (isPlaying):
     elif (action == "attack"):
         damage_player()
     elif (action == "use"):
-        use_item()
+        player_heal()
     elif (action == "move"):
         player_move()
     else:

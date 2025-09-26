@@ -1,7 +1,17 @@
-class Hero ():
+from character import Character
+from character import Enemy
+
+char = Character()
+enem = Enemy()
+
+
+class Hero (Character):
 
     def __init__(self):
-        self.max_health = 100.0
+        super()._init_()
+         
+        print("This is the Hero Class")
+
         self.health_potion_strength = 5
         
         self.stats = {
@@ -52,12 +62,26 @@ class Hero ():
         pass
 
 
-hero = Hero()
-hero.print_stats()
-print("\n------------\n")
-hero.set_name("Ezra")
-print("\n---------------\n")
-hero.stats["health"] = 70
-hero.heal("health potion")
-print("\n-------------\n")
+
+
+def main ():
+    print ("This is where the the game starts")
+
+    hero = Hero()
+    hero.print_stats()
+    print("\n------------\n")
+    hero.set_name("Ezra")
+    print("\n---------------\n")
+    hero.stats["health"] = 70
+    hero.heal("health potion")
+    print("\n-------------\n")
+    print (f"{hero.max_health}")
+    hero.retreat()
+
+   
+
+
+if __name__ == '__main__':
+    main()
+
 
